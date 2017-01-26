@@ -1,0 +1,18 @@
+<project name="Freediving-logbook" default="prepareForProd" basedir=".">
+	  <description>
+	    Build file for managing value between test and production environment 
+	  </description>
+	<property name="appnea_server_TEST_url" value="HOST_NAME=&quot;http://localhost:8888&quot;"/>
+	<property name="appnea_server_PRODUCTION_url" value="HOST_NAME=&quot;https://app-nea-it.appspot.com&quot;"/>
+
+	<target name="prepareForProd" description="prepare source for prod distribution">
+		
+		<echo message="${appnea_server_PRODUCTION_url}" />
+		<replace file="${project.build.sourceDirectory}/ragnoni/maven/example/App.java"  token="${appnea_server_TEST_url}" value="${appnea_server_PRODUCTION_url}"/>
+	</target>
+	<target name="prepareForDev" description="prepare source for test distribution">
+		
+		<echo message="${appnea_server_TEST_url}" />
+		<replace file="${project.build.sourceDirectory}/ragnoni/maven/example/App.java"  token="${appnea_server_PRODUCTION_url}" value="${appnea_server_TEST_url}"/>
+	</target>
+</project>
