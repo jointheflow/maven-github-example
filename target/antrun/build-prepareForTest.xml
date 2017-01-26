@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project name="maven-antrun-" default="prepareForTest"  >
-<target name="prepareForTest" description="prepare source for test distribution">
-  <property name="appnea_server_TEST_url" value="HOST_NAME=&quot;http://localhost:8888&quot;"/>
-  <property name="appnea_server_PRODUCTION_url" value="HOST_NAME=&quot;https://app-nea-it.appspot.com&quot;"/>
-  <echo message="${appnea_server_TEST_url}"/>
-  <replace file="C:\myGianluca\Programmi\GitHub\git-demo\src\main\java/ragnoni/maven/example/App.java" value="${appnea_server_PRODUCTION_url}" token="${appnea_server_TEST_url}"/>
-</target>
-</project>
