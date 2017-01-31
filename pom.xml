@@ -3,7 +3,7 @@
 
   <groupId>ragnoni.maven.example</groupId>
   <artifactId>git-demo</artifactId>
-  <version>1.5-SNAPSHOT</version>
+  <version>1.5</version>
   <packaging>jar</packaging>
 
   <name>git-demo</name>
@@ -41,7 +41,7 @@
 	<connection>scm:git:git@github.com:jointheflow/maven-github-example.git</connection>
 	<url>scm:git:git@github.com:jointheflow/maven-github-example.git</url>
 	<developerConnection>scm:git:git@github.com:jointheflow/maven-github-example.git</developerConnection>
-    <tag>master</tag>
+    <tag>git-demo-1.5</tag>
   </scm>
   
   <!--build>
